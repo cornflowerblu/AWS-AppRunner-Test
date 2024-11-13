@@ -1,10 +1,7 @@
 from wsgiref.simple_server import make_server
 from pyramid.config import Configurator
 from pyramid.response import Response
-from dotenv import load_dotenv
 import os
-
-load_dotenv()
 
 def hello_world(request):
     name = os.environ.get('NAME')
